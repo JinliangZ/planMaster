@@ -4,6 +4,7 @@ import { firestoreConnect } from 'react-redux-firebase';
 import { Redirect } from 'react-router-dom';
 import { compose } from 'redux';
 import ProjectList from '../projects/ProjectList'
+import MyCalendar  from './Calendar';
 import MyTime from './Clock';
 
 
@@ -23,6 +24,11 @@ class Dashboard extends Component {
                     </div>
                     <div className="col s12 m5 offset-m1">
                         <MyTime />
+                        
+                        
+                    </div>
+                    <div className="col s12 m5 offset-m1">
+                        <MyCalendar/ >
                     </div>
                </div>
            </div>

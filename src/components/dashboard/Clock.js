@@ -20,7 +20,7 @@ function MyTime() {
     const time  = moment().format('MMMM Do YYYY, h:mm:ss a');
   
     return (
-      <div className="container center">
+      <div className="container center clock-container">
         <p>Current time: {time}</p>
         <div className = 'clock'>
             <Clock value={value} />        
