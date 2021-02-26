@@ -1,5 +1,5 @@
 import React,{useLayoutEffect, useState} from 'react';
-import { BrowserRouter as Router, Switch, Route, NavLink } from 'react-router-dom'
+import {  Switch, Route } from 'react-router-dom'
 import SignIn from './components/auth/SignIn';
 import SignUp from './components/auth/SignUp';
 import Dashboard from './components/dashboard/Dashboard';
@@ -20,10 +20,9 @@ function App() {
 
   useLayoutEffect(() => {
       window.addEventListener('resize',handleSize);
-  }, []);
+  }, [deskWidth]);
 
-  return (
-    <Router>
+  return (    
       <div className="App">
         {deskWidth != undefined && (deskWidth<=1000||deskWidth.deskWidth<=1000)  && (<SimpleMenu />)}        
         <Navbar />
@@ -49,9 +48,7 @@ function App() {
             </Route>
 
         </Switch>
-      </div>
-    </Router>
-    
+      </div>  
   );
 }
 

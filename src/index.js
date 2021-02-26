@@ -10,6 +10,7 @@ import thunk from 'redux-thunk';
 import { getFirestore, reduxFirestore, createFirestoreInstance } from "redux-firestore";
 import { getFirebase, isLoaded, ReactReduxFirebaseProvider } from "react-redux-firebase";
 import firebase from './config/fbConfig';
+import { BrowserRouter as Router } from 'react-router-dom'
 
 
 const createStoreWithFirebase = compose(
@@ -45,7 +46,9 @@ ReactDOM.render(
     <Provider store={store}>
       <ReactReduxFirebaseProvider {...rrfProps}>
         <AuthIsLoaded>
-         <App />
+          <Router>
+            <App />
+          </Router>
         </AuthIsLoaded>        
       </ReactReduxFirebaseProvider>
     </Provider>
