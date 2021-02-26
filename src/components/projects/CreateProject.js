@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux';
-import { createProject } from '../../store/actions/projectActions';
+import { createProject } from '../../redux/ducks/project';
 import { Redirect, withRouter } from 'react-router-dom';
 import { compose } from 'redux';
 

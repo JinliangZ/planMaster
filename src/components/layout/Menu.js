@@ -3,12 +3,16 @@ import React from 'react';
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
-import { connect } from 'react-redux';
+import { connect, useSelector, useDispatch } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import { signOut } from '../../store/actions/authActions';
 
 function SimpleMenu(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  
+  const auth = useSelector(state => state.firebase.auth);
+
+  const dispatch = useDispatch();
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -17,6 +21,10 @@ function SimpleMenu(props) {
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const handleSignOut = () =>{
+    dispatch(signOut())
+  }
 
   return (
     <div>
@@ -30,10 +38,10 @@ function SimpleMenu(props) {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-      {props.auth.uid !=null ? (
+      {auth.uid !=null ? (
             <div>
                 <MenuItem onClick={handleClose}><NavLink to='/create'>New Plan</NavLink></MenuItem>
-                <MenuItem onClick={handleClose}><a onClick={props.signOut}>Log Out</a></MenuItem>
+                <MenuItem onClick={handleClose}><a onClick={handleSignOut}>Log Out</a></MenuItem>
             </div>):(
             <div>
                 <MenuItem onClick={handleClose}> <NavLink to='/signup'>Sign Up</NavLink></MenuItem>
@@ -46,17 +54,17 @@ function SimpleMenu(props) {
   );
 };
 
-const mapStateToProps = (state) =>{
-    //console.log(state);
-    return {
-        auth: state.firebase.auth
-    }
-};
+// const mapStateToProps = (state) =>{
+//     //console.log(state);
+//     return {
+//         auth: state.firebase.auth
+//     }
+// };
 
 
-const mapDispatchToState = (dispatch) =>{
-    return {
-        signOut: () =>dispatch(signOut())
-    }
-}
-export default connect(mapStateToProps,mapDispatchToState)(SimpleMenu);
+// const mapDispatchToState = (dispatch) =>{
+//     return {
+//         signOut: () =>dispatch(signOut())
+//     }
+// }
+export default SimpleMenu;
