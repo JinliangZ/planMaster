@@ -1,16 +1,16 @@
 //Actions
-const CREATEPROJECT = "planmaster/project/CREATE_PROJECT";
-const CREATEPROJECTERROR = "planmaster/project/CREATE_PROJECT_ERROR"
+const CREATE_PROJECT = "planmaster/project/CREATE_PROJECT";
+const CREATE_PROJECT_ERROR = "planmaster/project/CREATE_PROJECT_ERROR"
 
 
 //Reducer
 const initState ={    projects : [{id: '1', title: 'PROJECTS ARE LOADING', content: 'PROJECTS ARE LOADING'}] };
 export default function projectReducer(state = initState, action){
     switch (action.type){
-        case CREATEPROJECT :
+        case CREATE_PROJECT :
             console.log('created project', action.project);
             return state;
-        case CREATEPROJECTERROR :
+        case CREATE_PROJECT_ERROR :
             console.log('create project error', action.err);
             return state;
         default: 
@@ -37,11 +37,11 @@ export const createProject = (project) => {
         }).then(()=>{
             //carry on dispatch as normal
             dispatch({
-                type: CREATEPROJECT,
+                type: CREATE_PROJECT,
                 project
             });
         }).catch((err)=>{
-            dispatch({type: CREATEPROJECTERROR, err})
+            dispatch({type: CREATE_PROJECT_ERROR, err})
         });
     }
 }
