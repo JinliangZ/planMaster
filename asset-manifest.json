@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/planMaster/static/css/main.1f3bb689.chunk.css",
+    "main.js": "/planMaster/static/js/main.2fa00d2b.chunk.js",
+    "main.js.map": "/planMaster/static/js/main.2fa00d2b.chunk.js.map",
+    "runtime-main.js": "/planMaster/static/js/runtime-main.a493ae24.js",
+    "runtime-main.js.map": "/planMaster/static/js/runtime-main.a493ae24.js.map",
+    "static/css/2.ae23d09b.chunk.css": "/planMaster/static/css/2.ae23d09b.chunk.css",
+    "static/js/2.0a34ce85.chunk.js": "/planMaster/static/js/2.0a34ce85.chunk.js",
+    "static/js/2.0a34ce85.chunk.js.map": "/planMaster/static/js/2.0a34ce85.chunk.js.map",
+    "static/js/3.3a4f47ae.chunk.js": "/planMaster/static/js/3.3a4f47ae.chunk.js",
+    "static/js/3.3a4f47ae.chunk.js.map": "/planMaster/static/js/3.3a4f47ae.chunk.js.map",
+    "index.html": "/planMaster/index.html",
+    "static/css/2.ae23d09b.chunk.css.map": "/planMaster/static/css/2.ae23d09b.chunk.css.map",
+    "static/css/main.1f3bb689.chunk.css.map": "/planMaster/static/css/main.1f3bb689.chunk.css.map",
+    "static/js/2.0a34ce85.chunk.js.LICENSE.txt": "/planMaster/static/js/2.0a34ce85.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/planMaster/static/media/mario-bg.c9fe338e.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a493ae24.js",
+    "static/css/2.ae23d09b.chunk.css",
+    "static/js/2.0a34ce85.chunk.js",
+    "static/css/main.1f3bb689.chunk.css",
+    "static/js/main.2fa00d2b.chunk.js"
+  ]
+}
